@@ -1,5 +1,6 @@
 "use client";
 
+import LikeButton from "@/app/components/LikeButton";
 import MediaItem from "@/app/components/MediaItem";
 import { useUser } from "@/hooks/useUser";
 import { Song } from "@/types";
@@ -52,6 +53,7 @@ const LikedContent: React.FC<LikedContentProps> = ({
                             data={song}
                         />
                     </div>
+                    <LikeButton songId={song.id} />
 
                 </div>
 
