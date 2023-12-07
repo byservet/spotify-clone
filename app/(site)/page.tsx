@@ -2,6 +2,7 @@ import getSongs from "@/actions/getSongs";
 import Header from "../components/Header";
 import ListItem from "../components/ListItem";
 import PageContent from "./components/PageContent";
+import Error from "./error";
 
 export const revalidate = 0; // In this page, prevent to cache, everytime it would be up to date
 
@@ -9,6 +10,9 @@ export const revalidate = 0; // In this page, prevent to cache, everytime it wou
 export default async function Home() {
   
   const songs = await getSongs();
+
+  throw new Error("Test")
+  
   return (
     <div className="
       bg-neutral-900
