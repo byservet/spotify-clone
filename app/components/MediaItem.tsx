@@ -17,6 +17,7 @@ const MediaItem: React.FC<MediaItemProps> = ({
 
     const player = usePlayer();
     const imageUrl = useLoadImage(data);
+    
     const handleClick = () => {
         if (onClick) {
             return onClick(data.id);
